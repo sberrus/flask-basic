@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+        Con esta sintaxis especial, podemos enviar información desde una plantilla
+        hija a una plantilla base como es esta.
+        Esta información la vamos a propagar usando una plantilla hija la cual
+        Le enviará la información a esta
+    -->
+    <title>{% block title %}{% endblock %}</title>
+    <!-- 
+        Es importante saber que todo lo que pongamos dentro de las llaves es codigo python
+        es código python. Por lo que podemos usar métodos o estructuras de control y flujo
+        dentro de las plantillas
+     -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div style="border: 3px dotted blue; padding: 15px">
+      <h1>Yo soy el padre</h1>
+      <span
+        >Todo lo que esta en el componente azul viene del componente
+        base.html</span
+      >
+      <!-- más contenido para propagar -->
+      <section>{% block content %}{% endblock %}</section>
+    </div>
+  </body>
+</html>

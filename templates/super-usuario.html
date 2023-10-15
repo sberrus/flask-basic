@@ -1,0 +1,15 @@
+<!-- 
+    Usando la sintaxis especial de {{variable}} podemos utilizar los datos 
+    que nos envíe el render_template para que los renderize dinámicamente en nuestros templates
+-->
+{% extends 'base.html' %} {%block content%}
+
+<div style="border: 1px solid red">
+  <h1>Este contenido viene del componente hijo</h1>
+  <span
+    >Todo lo que se introduzca dentro de este fragmento de html en borde rojo se
+    renderizará en el componente padre</span
+  >
+  <h2>variable pasada desde app.py -> {{usuario}}</h2>
+</div>
+{%endblock%} {%block title %} Wow! soy el hijo{%endblock%}

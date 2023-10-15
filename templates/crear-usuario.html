@@ -1,0 +1,25 @@
+<!-- 
+    Usando la sintaxis especial de {{variable}} podemos utilizar los datos 
+    que nos envíe el render_template para que los renderize dinámicamente en nuestros templates
+-->
+{% extends 'base2.html' %} {%block body%}
+
+<main>
+  <h1>Crear usuario</h1>
+  <form method="post">
+    <label for="usuario"
+      >usuario
+      <input name="usuario" type="text" required />
+    </label>
+    <label for="correo"
+      >correo
+      <input name="correo" type="text" required />
+    </label>
+    <label for="edad"
+      >edad
+      <input name="edad" type="number" required />
+    </label>
+    <input type="submit" value="guardar" />
+  </form>
+</main>
+{%endblock%} {%block title %} Wow! soy el hijo{%endblock%}
