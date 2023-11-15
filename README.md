@@ -16,7 +16,7 @@ python3 -m venv venv \*\* También funciona en windows
 
 ### WINDOWS
 
-py -3 -m venv venv
+python3 -m venv venv
 
 Esto nos va a crear una carpeta con unos ejecutables los
 cuales ejecutaremos de la siguiente forma.
